@@ -1,0 +1,54 @@
+﻿@using LoginModule.Models
+@model IEnumerable<Form> 
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content=" width=device-width"/>
+    <title>Employee Record</title>
+</head>
+<body>
+    <h4>Employees</h4>
+    <hr/>
+    <table class="table table-bordered table-responsive table-hover " cellpadding="8" cellspacing="8"  >
+        <tr>
+            <th>Name</th>
+            <th>EmpId</th>
+            <th>DateOfBirth</th>
+            <th>FathersName</th>
+            <th>MothersName</th>
+            <th>address</th>
+            <th>salary</th>
+            <th>Fresher</th>
+            <th>Role</th>
+            <th>Notes</th>
+        </tr>
+        @foreach(Form form in Model)
+            {
+                <tr>
+                    <td>@form.Name</td>
+                    <td>@form.EmpId</td>
+                    <td>@form.DateOfBirth</td>
+                    <td>@form.FathersName</td>
+                    <td>@form.MothersName</td>
+                    <td>@form.address</td>
+                    <td>@form.salary</td>
+                    <td>@form.Fresher</td>
+                    <td>@form.Role</td>
+                    <td>@form.Notes</td>
+                </tr>
+            }
+
+    </table>
+    <br/>
+    <br/>
+    @using (Html.BeginForm("Export", "Form" , FormMethod.Post))
+            {
+                <input type ="submit" value=" Export"/>
+            }
+</body>
+</html>
