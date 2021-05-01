@@ -2,16 +2,10 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+  
+
     <style>
         #link-div {
             position: center;
@@ -21,47 +15,69 @@
             padding: 20px 20px;
         }
             
-            #beaut-body
-
-        {
-            background-color: dimgrey;
-            border: 1px solid #000000;
-        }
+           
     </style>
 </head>
-<body id="beaut_body">
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Employee Details</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Main" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div id="link-div">
-        <table>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                    <a href="~/Form/Create">Create</a>
-                </td>
-                <td>
-                </td>
-                <td></td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                    <a href="~/Form/Index">  View </a>
-                </td>
+        <center><h1>Welcome</h1><br/><h6>Click on create to open the form and view to view the employee record.</h6></center>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <a href="~/Forms/Create">Create  </a>
+                    </td>
+                    <td>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <a href="~/Form/Index">  View </a>
+                    </td>
+                    
 
 
-            </tr>
-            <tr>
-                <td>
-                    <a asp-controller="Home" asp-action="Logout">LogOut</a>
-                </td>
-            </tr>
-        </table>
-
+                </tr>
+               
+            </table>
+            </center>
 
     </div>
 </body>
-</html>
+
 

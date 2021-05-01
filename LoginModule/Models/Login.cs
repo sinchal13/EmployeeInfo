@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace LoginModule.Models
     public class Login
     {
 
-        [Required]
+      [ Required ]
         public string UserName { get; set; }
 
         [Required]

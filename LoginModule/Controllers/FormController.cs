@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using ClosedXML.Excel;
 using System.IO;
 using System.Data;
+using Microsoft.AspNetCore.Http;
+using DocumentFormat.OpenXml.Office2010.Excel;
 
 namespace LoginModule.Controllers
 {
@@ -23,20 +25,7 @@ namespace LoginModule.Controllers
             List<Form> Forms = (from Form in _auc.Forms.Take(10) select Form).ToList();
             return View(Forms);
         }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Form fr)
-        {
-            _auc.Add(fr);
-            _auc.SaveChanges();
-            ViewBag.message = "Successfully Saved";
-            return View();
-;
-        }
+       
 
         public IActionResult Export()
         {

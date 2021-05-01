@@ -46,7 +46,7 @@ namespace LoginModule.Controllers
         public IActionResult Logout()
         {
            
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home"); 
         }
 
         public IActionResult Privacy()
